@@ -17,8 +17,11 @@ class DocsGen:
         for root, _, files in os.walk(self.directory_path):
             for file in files:
                 if file.endswith('.py') and not file.startswith('__'):
+                    relative_path = os.path.relpath(root, self.directory_path)
+                    module_name_parts = relative_path.split(os.sep)
+                    module_name_parts.append(os.path.splitext(file)[0])
+                    module_name = '.'.join(filter(None, module_name_parts))
                     file_path = os.path.join(root, file)
-                    module_name = os.path.splitext(os.path.basename(file_path))[0]
                     try:
                         modules[module_name] = run_path(file_path)
                     except Exception as e:
