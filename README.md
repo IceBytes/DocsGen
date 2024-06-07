@@ -1,12 +1,12 @@
 # Documentation
 
-- DocsGen is a Python library that generates docs for python libs.
+- DocsGen is a Python library that generates documentation for Python libraries.
 
-- Lib Features:
-    - Generate Docs in markdown.
+- Library Features:
+    - Generates documentation in markdown format.
     - Simple to use.
-    - Automatic docs generator.
-    - Support making example for use.
+    - Automatic documentation generation.
+    - Supports creating examples for usage.
 
 ## Example to load the library
 
@@ -19,7 +19,7 @@ from docsgen import *
 ---
 
 ### `DocsGen.__init__` (method)
-**Description**: Constructor for DocsGen
+**Description**: Constructor for DocsGen.
 
 **Arguments**:
 ```txt
@@ -35,7 +35,7 @@ docsgen = DocsGen(lib_name, directory_path)
 ---
 
 ### `DocsGen.write_documentation` (method)
-**Description**: No method description provided.
+**Description**: Method to write the documentation.
 
 **Arguments**:
 ```txt
@@ -46,8 +46,7 @@ This function has no arguments.
 ```txt
 NoneType
 ```
-**Returns Description**:
-
+**Returns Description**: Returns nothing.
 
 **Example for use**:
 ```python
@@ -56,3 +55,12 @@ docsgen.write_documentation()
 ```
 
 ---
+
+### Command Line Interface (CLI)
+To use the library's CLI, execute the following command:
+
+```
+docsgen lib_name, dir
+```
+
+This command generates documentation for the specified library (`lib_name`) located in the specified directory (`dir`).
